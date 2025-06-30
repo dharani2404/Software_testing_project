@@ -1,0 +1,146 @@
+style.css
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF5E1; /* Cream */
+    color: #3D005D; /* Dark Purple */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #6A0DAD; /* Deep Violet */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+#searchBox {
+    width: 50%;
+    padding: 10px;
+    display: block;
+    margin: 10px auto;
+}
+
+#sidebar {
+    width: 25%;
+    background-color: #C19DF7; /* Soft Lavender */
+    padding: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #6A0DAD;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    width: 75%;
+    padding: 20px;
+}
+
+section {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* 🌍 Fully Optimized Student List Table */
+#studentsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #3D005D;
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 1024px) {
+    body {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    button {
+        width: 80%;
+        margin: 5px auto;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    #studentsTable th {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    #searchBox {
+        width: 80%;
+    }
+
+    #sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    button {
+        width: 45%;
+        margin: 5px;
+    }
+
+    #studentsTable th, #studentsTable td {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    #searchBox {
+        width: 90%;
+    }
+
+    #sidebar {
+        flex-direction: column;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    #studentsTable {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #studentsTable th, #studentsTable td {
+        font-size: 11px;
+        padding: 5px;
+    }
+}
